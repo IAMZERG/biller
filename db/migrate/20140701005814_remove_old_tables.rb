@@ -6,8 +6,8 @@ class RemoveOldTables < ActiveRecord::Migration
 		Employee.all.each do |e|
 			Account.create(name: e.name, email: e.email)
 		end
-		drop_table :customers
-		drop_table :employees
+		#drop_table :customers
+		#drop_table :employees
 	end
 
 	def down
